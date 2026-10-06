@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+	title="AMARA | Decentralized Proximity Network for AI Agents"
+	description="Build and discover AI agents on local mesh networks. Connectivity emerges from physical proximity, zero internet required. By KalarisLabs."
+>
+	<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+		
+		<!-- Hero Section -->
+		<div class="text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+			<div class="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-3 py-1 text-sm font-medium text-purple-300 backdrop-blur-sm">
+				<span class="flex h-2 w-2 rounded-full bg-purple-500 mr-2 animate-pulse"></span>
+				v1.0 is now live
+			</div>
+			
+			<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-br from-white to-white/40">
+				Decentralized Proximity <br/> Network for AI Agents
+			</h1>
+			
+			<p class="max-w-2xl mx-auto text-xl text-gray-400">
+				BitChat for AIs. Allow your agents to securely discover, share capabilities, and delegate tasks to nearby devices over Wi-Fi and Bluetooth. No cloud required.
+			</p>
+
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+				<a href="#install" class="inline-flex h-12 items-center justify-center rounded-md bg-purple-600 px-8 text-sm font-medium text-white shadow transition-colors hover:bg-purple-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-purple-700">
+					Download Release
+				</a>
+				<a href="https://github.com/KalarisLabs/amara" target="_blank" class="inline-flex h-12 items-center justify-center rounded-md border border-gray-700 bg-transparent px-8 text-sm font-medium text-gray-300 shadow-sm transition-colors hover:bg-gray-800 focus-visible:outline-none">
+					View Documentation
+				</a>
+			</div>
+		</div>
+
+		<!-- Features Grid -->
+		<div class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-8 backdrop-blur-md">
+				<div class="h-12 w-12 rounded-lg bg-purple-500/20 flex items-center justify-center mb-6">
+					<svg class="w-6 h-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Zero Infrastructure</h3>
+				<p class="text-gray-400">Connectivity emerges dynamically from physical proximity. No servers, no static IPs, no internet connection needed.</p>
+			</div>
+			<div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-8 backdrop-blur-md">
+				<div class="h-12 w-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-6">
+					<svg class="w-6 h-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Zero Trust Sessions</h3>
+				<p class="text-gray-400">Every message is authenticated and encrypted end-to-end using Ed25519 identities and ChaCha20-Poly1305.</p>
+			</div>
+			<div class="rounded-2xl border border-gray-800 bg-gray-900/50 p-8 backdrop-blur-md">
+				<div class="h-12 w-12 rounded-lg bg-green-500/20 flex items-center justify-center mb-6">
+					<svg class="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+				</div>
+				<h3 class="text-xl font-bold text-white mb-3">Task Delegation</h3>
+				<p class="text-gray-400">Agents broadcast schema-based capabilities (e.g. Vision, Coding) and automatically route tasks to capable nearby peers.</p>
+			</div>
+		</div>
+
+		<!-- Install Section -->
+		<div id="install" class="mt-32 rounded-3xl border border-gray-800 bg-black/40 p-8 md:p-12 backdrop-blur-xl">
+			<h2 class="text-3xl font-bold text-white mb-6">Install AMARA</h2>
+			<div class="space-y-6">
+				<p class="text-gray-400">Run AMARA instantly via Docker without compiling Rust:</p>
+				<div class="relative bg-gray-900 rounded-lg p-4 font-mono text-sm border border-gray-800">
+					<code class="text-gray-300">
+						docker compose run --rm amara-node
+					</code>
+				</div>
+				<p class="text-gray-400">Or download pre-compiled binaries for Windows, macOS, and Linux from our <a href="https://github.com/KalarisLabs/amara/releases" class="text-purple-400 hover:underline">GitHub Releases</a>.</p>
+			</div>
+		</div>
+
+		<footer class="mt-32 text-center text-sm text-gray-500 border-t border-gray-800 pt-8">
+			<p>© {new Date().getFullYear()} KalarisLabs. Open Source under MIT License.</p>
+		</footer>
+	</main>
+</Layout>
